@@ -11,7 +11,7 @@ export default function BestServices() {
   return (
     <Stack paddingY={10} paddingX={{ lg: 195 / 8 }} spacing={10}>
       <SectionHeader title='The Best Services' subtitle='Featured Products' description='Problems trying to resolve the conflict between' />
-      <Grid container columns={3} spacing={30 / 8}>
+      <Grid container columns={3} spacing={3.75}>
         {landingPage.services.map((service, index) => (
           <Grid xs={3} md={1} key={index}>
             <Stack key={index} spacing={20 / 8} width={'100%'} paddingX={5} paddingY={35 / 8} alignItems={'center'}>

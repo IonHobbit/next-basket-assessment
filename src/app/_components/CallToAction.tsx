@@ -5,7 +5,7 @@ export default function CallToAction() {
   const { palette: { primary } } = useTheme();
 
   return (
-    <Stack marginX={{ xs: -5, sm: -6 }} paddingTop={20} paddingBottom={112 / 8} paddingX={{ xs: 5, lg: 416.5 / 8 }} alignItems={'center'} spacing={30 / 8} sx={{ backgroundImage: `url('/images/section-bg.jpeg')`, backgroundSize: 'cover' }}>
+    <Stack marginX={{ xs: -5, sm: -6 }} paddingTop={20} paddingBottom={112 / 8} paddingX={{ xs: 5, lg: 416.5 / 8 }} alignItems={'center'} spacing={3.75} sx={{ backgroundImage: `url('/images/section-bg.jpeg')`, backgroundSize: 'cover' }}>
       <Typography variant='h6' color={"primary.main"} textAlign={'center'}>Designing Better Experience</Typography>
       <Typography variant='h2' color={"text.primary"} textAlign={'center'} lineHeight={'50px'}>Problems trying to resolve
         the conflict between</Typography>

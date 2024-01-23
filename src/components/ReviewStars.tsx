@@ -9,7 +9,7 @@ type ReviewStarsProps = {
 
 export default function ReviewStars({ stars, maxStars = 5 }: ReviewStarsProps) {
   return (
-    <Stack direction={'row'} spacing={5 / 8}>
+    <Stack direction={'row'} spacing={0.625}>
       {[...Array(maxStars)].map((_, index) => (
         <Icon icon={index + 1 <= stars ? 'tabler:star-filled' : 'tabler:star'} color='#F3CD03' width={22} />
       ))}

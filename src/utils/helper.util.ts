@@ -3,8 +3,9 @@ const formatPrice = (price: number) => {
 }
 
 const getDiscountedPrice = (price: number, discountPercentage: number) => {
-  return formatPrice(price - ((price * discountPercentage) / 100))
+  return price - ((price * discountPercentage) / 100)
 }
+
 
 const helperUtil = { formatPrice, getDiscountedPrice }
 

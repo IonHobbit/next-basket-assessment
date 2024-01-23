@@ -29,11 +29,11 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <Typography variant='h4' color={"text.primary"}>{post.name}</Typography>
         <Typography color={"text.secondary"}>{post.description}</Typography>
         <Stack direction={{ xs: 'column', md: 'row' }} paddingY={15 / 8} justifyContent={'space-between'} spacing={15 / 8}>
-          <Stack direction={'row'} alignItems={'center'} spacing={5 / 8}>
+          <Stack direction={'row'} alignItems={'center'} spacing={0.625}>
             <Icon icon={'ci:alarm'} color={primary.main} />
             <Typography variant='body2' color={"text.secondary"}>{post.date}</Typography>
           </Stack>
-          <Stack direction={'row'} alignItems={'center'} spacing={5 / 8}>
+          <Stack direction={'row'} alignItems={'center'} spacing={0.625}>
             <Icon icon={'entypo:area-graph'} color={success.dark} />
             <Typography variant='body2' color={"text.secondary"}>{post.comments} Comments</Typography>
           </Stack>

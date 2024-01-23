@@ -7,7 +7,7 @@ export default function Landing() {
 
   const CardTitle = ({ lineHeight }: { lineHeight?: string }) => {
     return (
-      <Stack spacing={5 / 8} position={'absolute'} padding={3} zIndex={10} overflow={'hidden'}>
+      <Stack spacing={0.625} position={'absolute'} padding={3} zIndex={10} overflow={'hidden'}>
         <Typography variant='h6' color="success.main">5 items</Typography>
         <Typography variant='h2' color="text.primary" lineHeight={lineHeight} className='truncate'>FURNITURE</Typography>
         <Typography variant='h6' color="text.primary">Read More</Typography>

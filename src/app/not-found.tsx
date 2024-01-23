@@ -1,4 +1,5 @@
-import { Box, Link, Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
+import Link from 'next/link'
 import React from 'react'
 
 export default function NotFound() {

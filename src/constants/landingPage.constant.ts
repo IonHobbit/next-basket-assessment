@@ -1,26 +1,26 @@
 const contactInformation = {
-  phoneNumber: '123-456-7890',
+  phoneNumber: '08166557616',
   email: 'ayorg360@gmail.com',
   socialMedia: [
     {
       name: 'instagram',
-      url: 'https://www.instagram.com/ayorg360/',
-      icon: 'basil:instagram-outline'
+      url: 'https://www.instagram.com/bandage/',
+      icon: 'ant-design:instagram-outlined'
+    },
+    {
+      name: 'youtube',
+      url: 'https://www.youtube.com/bandage/',
+      icon: 'ant-design:youtube-filled'
     },
     {
       name: 'facebook',
-      url: 'https://www.facebook.com/ayorg360',
-      icon: 'ant-design:facebook-outlined'
+      url: 'https://www.facebook.com/bandage',
+      icon: 'mdi:facebook'
     },
     {
       name: 'twitter',
-      url: 'https://twitter.com/ayorg360',
+      url: 'https://twitter.com/bandage',
       icon: 'ant-design:twitter-outlined'
-    },
-    {
-      name: 'linkedIn',
-      url: 'https://www.linkedin.com/in/ayorg360/',
-      icon: 'ant-design:linkedin-outlined'
     },
   ]
 }
@@ -55,16 +55,16 @@ const navigationLinks = [
 
 const services = [
   {
-    icon: 'ant-design:medicine-box-outlined',
+    icon: 'bxs:book-reader',
     name: 'Easy Wins',
     description: 'Get your best looking smile now'
   },
   {
-    icon: 'ant-design:medicine-box-outlined',
+    icon: 'carbon:book',
     name: 'Concrete',
     description: 'Defalcate is most focused in helping you discover your most beautiful smile'
   }, {
-    icon: 'ant-design:medicine-box-outlined',
+    icon: 'uil:arrow-growth',
     name: 'Hack Growth',
     description: 'Overcame any hurdle or any other problem.'
   }
@@ -193,6 +193,25 @@ const footerLinks = [
   }
 ]
 
-const landingPage = { contactInformation, navigationLinks, services, posts, reviewImages, footerLinks };
+const footerSocials = [
+  {
+    name: 'facebook',
+    url: 'https://www.facebook.com/ayorg360',
+    icon: 'mdi:facebook'
+  },
+  {
+    name: 'instagram',
+    url: 'https://www.instagram.com/ayorg360/',
+    icon: 'ant-design:instagram-outlined'
+  },
+  {
+    name: 'twitter',
+    url: 'https://twitter.com/ayorg360',
+    icon: 'ant-design:twitter-outlined'
+  },
+
+]
+
+const landingPage = { contactInformation, navigationLinks, services, posts, reviewImages, footerLinks, footerSocials };
 
 export default landingPage;

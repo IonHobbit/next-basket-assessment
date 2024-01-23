@@ -1,20 +1,21 @@
 import React from 'react'
 import { Icon } from '@iconify/react';
 import landingPage from '@/constants/landingPage.constant'
-import { Box, Button, Input, Link, Stack, Typography, useTheme } from '@mui/material'
+import { Box, Button, Input, Stack, Typography, useTheme } from '@mui/material'
+import Link from 'next/link';
 
 export default function Footer() {
-  const { palette: { primary } } = useTheme();
+  const { palette: { primary, text } } = useTheme();
 
   return (
     <React.Fragment>
       <Stack paddingY={5} direction={{ xs: 'column', md: 'row' }} sx={{ backgroundColor: '#FAFAFA' }} spacing={3} justifyContent={'space-between'} paddingX={{ xs: 5, lg: 195 / 8 }}>
-        <Link variant="h3" underline="none" href={`/`} color={'text.primary'}>
+        <Link className='no-underline text-2xl font-bold tracking-[0.1px]' href={`/`} style={{ color: text.primary }}>
           Bandage
         </Link>
         <Stack direction={"row"} alignItems={"center"} spacing={1.25}>
-          {landingPage.contactInformation.socialMedia.map((socialMedia, index) => (
-            <Link key={index} underline="none" href={socialMedia.url} color={'primary.main'}>
+          {landingPage.footerSocials.map((socialMedia, index) => (
+            <Link key={index} className='no-underline' href={socialMedia.url} style={{ color: primary.main }}>
               <Icon width={24} icon={socialMedia.icon} />
             </Link>
           ))}
@@ -25,14 +26,14 @@ export default function Footer() {
         paddingX={{ xs: 5, lg: 195 / 8 }}
         direction={{ xs: 'column', md: 'row' }}
         justifyContent={'space-between'}
-        spacing={30 / 8}
+        spacing={3.75}
       >
         {landingPage.footerLinks.map((footerLink, index) => (
           <Stack key={index} flex={1} spacing={20 / 8}>
             <Typography variant='h5' noWrap color={"text.primary"}>{footerLink.header}</Typography>
             <Stack spacing={10 / 8}>
               {footerLink.links.map((link, index) => (
-                <Link key={index} className="link whitespace-nowrap" underline="none" href={link.url} color={'text.secondary'}>
+                <Link key={index} className="link whitespace-nowrap no-underline" href={link.url} style={{ color: text.secondary }}>
                   {link.name}
                 </Link>
               ))}

@@ -12,7 +12,7 @@ export default function Reviews() {
         <Grid xs={2} md={1}>
           <Stack spacing={28 / 8} width={'100%'} alignItems={'center'}>
             <Typography variant='h3' color={"text.primary"} textAlign={'center'}>What they say about us</Typography>
-            <Stack spacing={20 / 8} width={'100%'} alignItems={'center'} padding={30 / 8}>
+            <Stack spacing={20 / 8} width={'100%'} alignItems={'center'} padding={3.75}>
               <Image src="/images/review-user.png" alt="Review User Image" width={90} height={90}
                 className='rounded-full border-[1.8px] border-[#BDBDBD] overflow-hidden' />
               <ReviewStars stars={4} />

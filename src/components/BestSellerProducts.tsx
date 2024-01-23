@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useEffect, useState } from 'react'
-import landingPage from '@/constants/landingPage.constant'
-import { Stack, Typography, useTheme, Button, Box, Link } from '@mui/material'
+import { Stack, Typography, useTheme, Button, Box } from '@mui/material'
 import SectionHeader from './SectionHeader';
 import Image from 'next/image';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import LoadingIcons from 'react-loading-icons';
+import Link from 'next/link';
 
 type BestSellerProductsProps = {
   columns: number;
@@ -64,17 +64,17 @@ export default function BestSellerProducts({ columns, titlePosition, paginate }:
       }
       {products.length > 0 ?
         <>
-          <Grid container columns={columns} spacing={30 / 8} padding={3} borderTop={titlePosition == 'left' ? '2px solid #ECECEC' : ''}>
+          <Grid container columns={columns} spacing={3.75} padding={3} borderTop={titlePosition == 'left' ? '2px solid #ECECEC' : ''}>
             {products.map((product, index) => (
               <Grid xs={columns} md={1} key={index}>
-                <Link href={`/product/${product.id}`} underline='none' className="cursor-pointer">
+                <Link href={`/product/${product.id}`} className="cursor-pointer no-underline">
                   <Box position={'relative'} overflow={'hidden'} height={{ xs: 360, md: 238 }} width={'100%'}>
-                    <Image src={product.thumbnail} alt={`${product.title} thumbnail`} layout={'fill'} className='object-cover' />
+                    <Image src={product.thumbnail} alt={`${product.title} thumbnail`} fill sizes='100%' className='object-cover' />
                   </Box>
                   <Stack alignItems={alignment} padding={3} paddingBottom={'35px'} spacing={10 / 8}>
                     <Typography variant='h5' color={"text.primary"} className=' line-clamp-2' textTransform={'capitalize'} textAlign={alignment}>{product.title}</Typography>
                     <Typography className='link' color={"text.secondary"} textTransform={'capitalize'} textAlign={alignment}>{product.category}</Typography>
-                    <Stack direction={'row'} flexWrap='wrap' alignItems={'center'} gap={5 / 8}>
+                    <Stack direction={'row'} flexWrap='wrap' alignItems={'center'} gap={0.625}>
                       {product.discountPercentage > 0 &&
                         <Typography variant='h5' color={"text.disabled"} textAlign={alignment}>{formatPrice(product.price)}</Typography>
                       }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { lightTheme } from "@/themes/lightTheme";
+import StoreProvider from "./providers/StoreProvider";
+import ToastProvider from "./providers/ToastProvider";
 
 export const metadata: Metadata = {
   title: "Bandage",
@@ -15,10 +17,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider theme={lightTheme}>
-        <CssBaseline />
-        <body>{children}</body>
-      </ThemeProvider>
-    </html>
+      <body>
+        <StoreProvider>
+          <ToastProvider>
+            <ThemeProvider theme={lightTheme}>
+              <CssBaseline />
+              {children}
+            </ThemeProvider>
+          </ToastProvider>
+        </StoreProvider>
+      </body>
+    </html >
   );
 }
