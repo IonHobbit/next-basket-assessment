@@ -15,9 +15,7 @@ export default function MainTemplate({ children }: Props) {
     <main className=' min-h-screen'>
       <ContactBar />
       <Header />
-      <Container maxWidth={"xl"} sx={{ paddingX: { xs: 5, sm: 6 } }}>
-        {children}
-      </Container>
+      {children}
       <Footer />
     </main>
   )

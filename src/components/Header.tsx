@@ -64,6 +64,7 @@ export default function Header() {
   const [isWishlistOpened, setIsWishlistOpened] = useState(false);
 
   const toggleMenu = () => setIsOpened(!isOpened);
+  const closeMenu = () => setIsOpened(false);
   const openCart = () => setIsCartOpened(true);
   const openWishlist = () => setIsWishlistOpened(true);
 
@@ -83,7 +84,7 @@ export default function Header() {
           </Stack>
         </Stack>
 
-        <ActionItems openCart={openCart} openWishlist={openWishlist} closeMenu={toggleMenu} className='!hidden md:!flex' />
+        <ActionItems openCart={openCart} openWishlist={openWishlist} closeMenu={closeMenu} className='!hidden md:!flex' />
 
         {/* Mobile Options */}
         <Stack direction={"row"} alignItems={"center"} spacing={3.75} sx={{ display: { md: 'none' } }}>
@@ -105,7 +106,7 @@ export default function Header() {
               {navigationLink.name}
             </Link>
           ))}
-          <ActionItems openCart={openCart} openWishlist={openWishlist} closeMenu={toggleMenu} className='md:!hidden' />
+          <ActionItems openCart={openCart} openWishlist={openWishlist} closeMenu={closeMenu} className='md:!hidden' />
         </Stack>
       }
 

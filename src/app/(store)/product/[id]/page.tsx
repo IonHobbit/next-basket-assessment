@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import React, { useEffect, useRef, useState } from 'react'
-import { Box, Stack, Typography, useTheme } from '@mui/material';
+import { Box, Container, Stack, Typography, useTheme } from '@mui/material';
 import { useParams } from 'next/navigation';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import Image from 'next/image';
@@ -52,7 +52,7 @@ export default function ProductPage() {
   }
 
   return (
-    <React.Fragment>
+    <Container maxWidth={"xl"} sx={{ paddingX: { xs: 5, sm: 6 } }}>
       {product ? (
         <ProductDetail product={product} />
       ) : (
@@ -75,6 +75,6 @@ export default function ProductPage() {
           </Grid>
         ))}
       </Grid>
-    </React.Fragment>
+    </Container>
   )
 }
