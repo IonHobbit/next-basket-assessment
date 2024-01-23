@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Icon } from '@iconify/react';
 import { Box, Link, Stack, Typography, Button, useTheme } from '@mui/material';
 import { useParams } from 'next/navigation';
@@ -19,6 +19,7 @@ export default function ProductPage() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const { id } = useParams();
+  const bestSellerRef = useRef<HTMLDivElement>(null);
   const { palette: { common, primary, text } } = useTheme();
 
   const selectImage = (imageIndex: number) => {
@@ -28,8 +29,15 @@ export default function ProductPage() {
   const fetchProduct = async () => {
     try {
       const response = await fetch(`https://dummyjson.com/product/${id}`)
-      const data = await response.json()
-      setProduct(data)
+      const data = await response.json() as ProductI
+      if (data.id) {
+        setProduct(data)
+      } else {
+        setTimeout(() => {
+          if (bestSellerRef.current)
+            window.scrollTo({ top: bestSellerRef.current.scrollHeight - 300, behavior: 'smooth' })
+        }, 4000);
+      }
     } catch (error: any) {
       console.error(error);
     } finally {
@@ -51,7 +59,7 @@ export default function ProductPage() {
 
   return (
     <React.Fragment>
-      {product && (
+      {product ? (
         <React.Fragment>
           <Box marginX={{ xs: -5, sm: -6 }} paddingX={{ xs: 5, lg: 243 / 8 }} paddingY={5} sx={{ backgroundColor: '#FAFAFA' }}>
             <Stack paddingY={3} direction={'row'} justifyContent={{ xs: 'center', md: 'start' }} alignItems={'center'} spacing={15 / 8}>
@@ -160,20 +168,27 @@ export default function ProductPage() {
               </Grid>
             </Grid>
           </Stack>
-          <Box display={{ xs: 'none', md: 'block' }}>
-            <BestSellerProducts titlePosition='left' columns={4} />
-          </Box>
-          <Grid container columns={6} spacing={{ xs: 60 / 8, md: 30 / 8 }} paddingY={50 / 8}>
-            {productPage.brandLogos.map((brandLogo, index) => (
-              <Grid xs={6} md={1}>
-                <Box width={'100%'} height={'75px'} position={'relative'}>
-                  <Image src={brandLogo} alt={`brand logo ${index + 1}`} className='object-contain' fill sizes='100%' />
-                </Box>
-              </Grid>
-            ))}
-          </Grid>
         </React.Fragment>
+      ) : (
+        <Stack sx={{ minHeight: '60vh', alignItems: 'center', justifyContent: 'center' }}>
+          <Box sx={{ maxWidth: '400px', textAlign: 'center' }}>
+            <Typography variant='h3' color={"text.primary"} marginBottom={2}>We can't seem to find this product</Typography>
+            <Typography variant='body2' color={"text.primary"}>Please check below for our available bestsellers products</Typography>
+          </Box>
+        </Stack>
       )}
+      <Box ref={bestSellerRef} display={{ xs: 'none', md: 'block' }}>
+        <BestSellerProducts titlePosition='left' columns={4} />
+      </Box>
+      <Grid container columns={6} spacing={{ xs: 60 / 8, md: 30 / 8 }} paddingY={50 / 8}>
+        {productPage.brandLogos.map((brandLogo, index) => (
+          <Grid xs={6} md={1}>
+            <Box width={'100%'} height={'75px'} position={'relative'}>
+              <Image src={brandLogo} alt={`brand logo ${index + 1}`} className='object-contain' fill sizes='100%' />
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
     </React.Fragment>
   )
 }
