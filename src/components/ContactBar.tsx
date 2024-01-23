@@ -1,6 +1,6 @@
 import React from 'react'
 import { Icon } from '@iconify/react';
-import landingPage from '@/constants/landingPage'
+import landingPage from '@/constants/landingPage.constant'
 import { Container, Link, Stack, Typography, useTheme } from '@mui/material'
 
 export default function ContactBar() {

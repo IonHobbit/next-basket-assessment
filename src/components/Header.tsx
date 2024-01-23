@@ -1,8 +1,8 @@
 'use client';
 
 import { Icon } from '@iconify/react';
-import landingPage from '@/constants/landingPage';
-import { Box, Container, Link, Stack, Typography, useTheme } from '@mui/material'
+import landingPage from '@/constants/landingPage.constant';
+import { Container, Link, Stack, Typography, useTheme } from '@mui/material'
 import React from 'react'
 
 export default function Header() {
@@ -12,7 +12,7 @@ export default function Header() {
   const toggleMenu = () => setIsOpened(!isOpened);
 
   return (
-    <Container maxWidth={false} sx={{ padding: { xs: 0, sm: 2 } }}>
+    <Container maxWidth={false} sx={{ padding: { xs: 0, sm: 2 }, backgroundColor: '#FFF' }}>
       <Stack maxWidth={"xl"} margin={'auto'} direction={"row"} justifyContent={"space-between"} paddingY={2.5} paddingX={4}>
         <Stack direction={"row"} alignItems={"center"} spacing={120 / 8}>
           <Link variant="h3" underline="none" href={`/`} color={theme.palette.text.primary}>
