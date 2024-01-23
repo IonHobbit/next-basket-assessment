@@ -45,7 +45,7 @@ export default function Header() {
         </Stack>
 
         {/* Mobile Options */}
-        <Stack direction={"row"} alignItems={"center"} spacing={30 / 8} className='md:hidden'>
+        <Stack direction={"row"} alignItems={"center"} spacing={30 / 8} sx={{ display: { md: 'none' } }}>
           <Icon width={24} color={theme.palette.text.primary} icon="bi:search" />
           <Icon width={24} color={theme.palette.text.primary} icon="ant-design:shopping-cart-outlined" />
           <Icon onClick={toggleMenu} width={24} className='cursor-pointer' color={theme.palette.text.primary} icon="tabler:menu-deep" />

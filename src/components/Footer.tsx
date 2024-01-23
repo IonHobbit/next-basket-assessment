@@ -5,10 +5,10 @@ import { Box, Button, Input, Link, Stack, Typography, useTheme } from '@mui/mate
 
 export default function Footer() {
   const { palette: { primary } } = useTheme();
-  
+
   return (
     <React.Fragment>
-      <Stack marginX={{ xs: -5, sm: -6 }} paddingY={5} direction={{ xs: 'column', md: 'row' }} sx={{ backgroundColor: '#FAFAFA' }} spacing={3} justifyContent={'space-between'} paddingX={{ xs: 5, lg: 243 / 8 }}>
+      <Stack paddingY={5} direction={{ xs: 'column', md: 'row' }} sx={{ backgroundColor: '#FAFAFA' }} spacing={3} justifyContent={'space-between'} paddingX={{ xs: 5, lg: 195 / 8 }}>
         <Link variant="h3" underline="none" href={`/`} color={'text.primary'}>
           Bandage
         </Link>
@@ -20,7 +20,13 @@ export default function Footer() {
           ))}
         </Stack>
       </Stack>
-      <Stack paddingY={{ xs: 70 / 8, md: 50 / 8 }} direction={{ xs: 'column', md: 'row' }} justifyContent={'space-between'} spacing={30 / 8} paddingX={{ lg: 195 / 8 }}>
+      <Stack
+        paddingY={{ xs: 70 / 8, md: 50 / 8 }}
+        paddingX={{ xs: 5, lg: 195 / 8 }}
+        direction={{ xs: 'column', md: 'row' }}
+        justifyContent={'space-between'}
+        spacing={30 / 8}
+      >
         {landingPage.footerLinks.map((footerLink, index) => (
           <Stack key={index} flex={1} spacing={20 / 8}>
             <Typography variant='h5' noWrap color={"text.primary"}>{footerLink.header}</Typography>
@@ -55,7 +61,7 @@ export default function Footer() {
           </Box>
         </Stack>
       </Stack>
-      <Stack marginX={{ xs: -5, sm: -6 }} paddingY={25 / 8} alignItems={{ xs: 'center', md: 'start' }} paddingX={{ xs: 5, lg: 243 / 8 }} sx={{ backgroundColor: '#FAFAFA' }}>
+      <Stack paddingY={25 / 8} alignItems={{ xs: 'center', md: 'start' }} paddingX={{ xs: 5, lg: 195 / 8 }} sx={{ backgroundColor: '#FAFAFA' }}>
         <Typography width={{ xs: '200px', md: 'auto' }} sx={{ textAlign: { xs: 'center', md: 'left' } }} variant='h6' color={"text.secondary"}>Made With Love By Finland All Right Reserved</Typography>
       </Stack>
     </React.Fragment>
