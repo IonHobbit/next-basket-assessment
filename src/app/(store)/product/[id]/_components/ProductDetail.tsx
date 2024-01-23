@@ -165,7 +165,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
             </Grid>
             <Grid xs={9} md={4} height={'100%'}>
               <Box position={'relative'} borderRadius={5.38} height={372} overflow={'hidden'}>
-                <Image src="/images/product-description-image.jpeg" alt="Review Image" fill sizes='100%' />
+                <Image src="/images/product-description-image.webp" alt="Review Image" fill sizes='100%' />
               </Box>
             </Grid>
           </Grid>

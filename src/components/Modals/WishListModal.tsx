@@ -78,7 +78,7 @@ export default function WishListModal({ ...props }: WishListModalProps) {
           <Stack spacing={4}>
             <Stack maxHeight={400} height={'100%'} overflow={'auto'} spacing={2}>
               {wishlistProducts.map((product, index) => (
-                <WishListProduct product={product} viewProduct={handleClose} />
+                <WishListProduct key={index} product={product} viewProduct={handleClose} />
               ))}
             </Stack>
           </Stack>

@@ -19,7 +19,7 @@ export default function Landing() {
       <Grid xs={10} md={4} overflow={'hidden'} width={'100%'}>
         <CardTitle lineHeight='50px' />
         <Box position={'relative'} height={{ xs: '300px', md: '616px' }}>
-          <Image src="/images/home1.jpeg" alt="Picture of the Plates" className="object-cover" fill />
+          <Image src="/images/home-1.webp" alt="Picture of the Plates" className="object-cover" fill sizes='100%' priority />
         </Box>
       </Grid>
       <Grid xs={10} md={6}>
@@ -27,19 +27,19 @@ export default function Landing() {
           <Grid xs={2}>
             <CardTitle />
             <Box position={'relative'} height={'300px'}>
-              <Image src="/images/home2.jpeg" alt="Picture of a Flower in a flower pot" className="object-cover" fill />
+              <Image src="/images/home-2.webp" alt="Picture of a Flower in a flower pot" className="object-cover" fill sizes='100%' />
             </Box>
           </Grid>
           <Grid xs={2} md={1}>
             <CardTitle />
             <Box position={'relative'} height={'300px'}>
-              <Image src="/images/home3.jpeg" alt="Picture of a Light Fixture" className="object-cover" fill />
+              <Image src="/images/home-3.webp" alt="Picture of a Light Fixture" className="object-cover" fill sizes='100%' />
             </Box>
           </Grid>
           <Grid xs={2} md={1}>
             <CardTitle />
             <Box position={'relative'} height={'300px'}>
-              <Image src="/images/home4.jpeg" alt="Picture of a Bowls" className="object-cover" fill />
+              <Image src="/images/home-4.webp" alt="Picture of a Bowls" className="object-cover" fill sizes='100%' />
             </Box>
           </Grid>
         </Grid>

@@ -72,21 +72,21 @@ const services = [
 
 const posts = [
   {
-    image: '/images/post1.jpeg',
+    image: '/images/post-1.webp',
     name: "Loudest à la Madison #1 (L'integral)",
     description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
     date: "22 April 2021",
     comments: 10
   },
   {
-    image: '/images/post2.jpeg',
+    image: '/images/post-2.webp',
     name: "Loudest à la Madison #1 (L'integral)",
     description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
     date: "22 April 2021",
     comments: 10
   },
   {
-    image: '/images/post3.jpeg',
+    image: '/images/post-3.webp',
     name: "Loudest à la Madison #1 (L'integral)",
     description: "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
     date: "22 April 2021",
@@ -95,15 +95,15 @@ const posts = [
 ]
 
 const reviewImages = [
-  '/images/review-1.png',
-  '/images/review-2.png',
-  '/images/review-3.png',
-  '/images/review-4.png',
-  '/images/review-5.png',
-  '/images/review-6.png',
-  '/images/review-7.png',
-  '/images/review-8.png',
-  '/images/review-9.png',
+  '/images/review-1.webp',
+  '/images/review-2.webp',
+  '/images/review-3.webp',
+  '/images/review-4.webp',
+  '/images/review-5.webp',
+  '/images/review-6.webp',
+  '/images/review-7.webp',
+  '/images/review-8.webp',
+  '/images/review-9.webp',
 ]
 
 const footerLinks = [

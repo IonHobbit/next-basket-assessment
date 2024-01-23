@@ -17,7 +17,7 @@ export default function FeaturedPost({ post }: FeaturedPostProps) {
         <Box position={'absolute'} bgcolor={'error.main'} paddingX={"10px"} zIndex={10} top={20} left={20} borderRadius={'3px'} boxShadow={'0px 2px 4px 0px rgba(0, 0, 0, 0.10)'}>
           <Typography variant='h6' color="common.white">NEW</Typography>
         </Box>
-        <Image src={post.image} alt='' className='object-cover' fill />
+        <Image src={post.image} alt='' className='object-cover' fill sizes='100%' />
 
       </Box>
       <Stack padding={3} spacing={10 / 8}>
