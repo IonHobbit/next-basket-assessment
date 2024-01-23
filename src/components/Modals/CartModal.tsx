@@ -1,11 +1,11 @@
 import React from 'react'
+import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import { decreaseQuantity, increaseQuantity, removeFromCart, selectCartItems, selectCartTotal } from '@/lib/features/cart/cartSlice';
 import { useAppDispatcher, useAppSelector } from '@/lib/hooks';
 import helperUtil from '@/utils/helper.util';
 import { Box, Button, Dialog, DialogContent, DialogProps, DialogTitle, Slide, Stack, Typography, useTheme } from '@mui/material'
 import { TransitionProps } from '@mui/material/transitions';
-import Image from 'next/image';
 
 type CartModalProps = {} & DialogProps;
 

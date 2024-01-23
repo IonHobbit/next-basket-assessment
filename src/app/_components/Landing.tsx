@@ -1,7 +1,7 @@
+import React from 'react'
+import Image from 'next/image'
 import { Stack, Typography, Box } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
-import Image from 'next/image'
-import React from 'react'
 
 export default function Landing() {
 

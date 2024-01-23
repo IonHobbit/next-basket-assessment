@@ -1,6 +1,6 @@
+import React from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Stack } from '@mui/material';
-import React from 'react'
 
 type ReviewStarsProps = {
   stars: number;

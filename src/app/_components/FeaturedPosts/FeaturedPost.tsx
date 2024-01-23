@@ -1,8 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
 import { Icon } from '@iconify/react';
 import landingPage from '@/constants/landingPage.constant';
 import { Box, Stack, Typography, useTheme } from '@mui/material'
-import Image from 'next/image'
 
 type FeaturedPostProps = {
   post: typeof landingPage.posts[0];

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import ProductPage from "./page";
 import { headers } from "next/headers";
+
 type Props = {
   params: { id: string }
 }

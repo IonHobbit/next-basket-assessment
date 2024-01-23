@@ -1,12 +1,12 @@
 'use client';
 
+import Link from 'next/link';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { Stack, Typography, useTheme, Button, Box } from '@mui/material'
 import SectionHeader from './SectionHeader';
-import Image from 'next/image';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
 import LoadingIcons from 'react-loading-icons';
-import Link from 'next/link';
 
 type BestSellerProductsProps = {
   columns: number;

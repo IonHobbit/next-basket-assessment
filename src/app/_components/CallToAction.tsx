@@ -1,5 +1,5 @@
-import { Box, Button, Stack, Typography, useTheme } from '@mui/material'
 import React from 'react'
+import { Box, Button, Stack, Typography, useTheme } from '@mui/material'
 
 export default function CallToAction() {
   const { palette: { primary } } = useTheme();

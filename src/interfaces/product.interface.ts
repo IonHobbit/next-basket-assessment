@@ -11,8 +11,3 @@ interface ProductI {
   thumbnail: string;
   images: string[];
 }
-
-interface CartItemI {
-  product: ProductI;
-  quantity: number;
-}

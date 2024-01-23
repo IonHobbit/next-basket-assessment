@@ -1,35 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* h2 {
-  @apply !font-bold !text-[40px] leading-[50px] tracking-[0.2px];
-}
-
- h3 {
-  @apply !font-bold !text-2xl tracking-[0.1px];
-}
-
-h4 {
-  @apply !font-normal !text-xl leading-[30px] tracking-[0.2px];
-}
-
-h5 {
-  @apply !font-bold !text-base tracking-[0.1px];
-}
-
-h6 {
-  @apply !font-bold !text-sm leading-6 tracking-[0.2px];
-}
-
-p {
-  @apply !font-normal !text-sm tracking-[0.2px];
-} */
-
 .link {
   @apply !font-bold !text-sm leading-6 tracking-[0.2px];
-}
-
-.small {
-  @apply !font-normal !text-xs tracking-[0.2px];
 }
 
 .mobile-menu-item {

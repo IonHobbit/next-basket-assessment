@@ -1,11 +1,11 @@
 import React from 'react'
+import Link from 'next/link';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import { useAppDispatcher, useAppSelector } from '@/lib/hooks';
 import { Box, Dialog, DialogContent, DialogProps, DialogTitle, Slide, Stack, Typography } from '@mui/material'
 import { TransitionProps } from '@mui/material/transitions';
 import { removeFromWishlist, selectWishlistProducts } from '@/lib/features/wishlist/wishlistSlice';
-import Link from 'next/link';
 
 type WishListModalProps = {} & DialogProps;
 

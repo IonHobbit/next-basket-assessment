@@ -1,8 +1,8 @@
 import React from 'react'
+import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import landingPage from '@/constants/landingPage.constant'
 import { Box, Button, Input, Stack, Typography, useTheme } from '@mui/material'
-import Link from 'next/link';
 
 export default function Footer() {
   const { palette: { primary, text } } = useTheme();

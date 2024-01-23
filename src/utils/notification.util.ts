@@ -10,22 +10,10 @@ const toastConfig: ToastOptions = {
   theme: "light",
 }
 
-const info = (message: string, options?: ToastOptions): void => {
-  toast.info(message, { ...toastConfig, ...options })
-}
-
 const success = (message: string, options?: ToastOptions): void => {
   toast.success(message, { ...toastConfig, ...options })
 }
 
-const error = (message: string, options?: ToastOptions): void => {
-  toast.error(message, { ...toastConfig, ...options })
-}
-
-const warning = (message: string, options?: ToastOptions): void => {
-  toast.warning(message, { ...toastConfig, ...options })
-}
-
-const notificationUtil = { info, success, error, warning }
+const notificationUtil = { success }
 
 export default notificationUtil;

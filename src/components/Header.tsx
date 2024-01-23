@@ -1,15 +1,15 @@
 'use client';
 
+import Link from 'next/link';
+import React, { useState } from 'react'
 import { Icon } from '@iconify/react';
 import landingPage from '@/constants/landingPage.constant';
 import { Container, Stack, Typography, useTheme } from '@mui/material'
-import React, { useState } from 'react'
 import CartModal from './Modals/CartModal';
 import { useAppSelector } from '@/lib/hooks';
 import { selectCartQuantity } from '@/lib/features/cart/cartSlice';
 import { selectWishListQuantity } from '@/lib/features/wishlist/wishlistSlice';
 import WishListModal from './Modals/WishListModal';
-import Link from 'next/link';
 
 type ActionItemsProps = {
   className?: string;

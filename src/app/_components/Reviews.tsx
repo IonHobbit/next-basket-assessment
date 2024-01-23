@@ -1,9 +1,9 @@
+import React from 'react'
+import Image from 'next/image'
 import ReviewStars from '@/components/ReviewStars'
 import landingPage from '@/constants/landingPage.constant'
 import { Box, Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
-import Image from 'next/image'
-import React from 'react'
 
 export default function Reviews() {
   return (

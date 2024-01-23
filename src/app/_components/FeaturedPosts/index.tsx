@@ -1,7 +1,7 @@
+import React from 'react'
 import landingPage from '@/constants/landingPage.constant'
 import { Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2/Grid2'
-import React from 'react'
 import FeaturedPost from './FeaturedPost'
 
 export default function FeaturedPosts() {

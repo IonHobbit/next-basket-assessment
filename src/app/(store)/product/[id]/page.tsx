@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react'
+import Link from 'next/link';
 import { Icon } from '@iconify/react';
+import React, { useEffect, useRef, useState } from 'react'
 import { Box, Stack, Typography, Button, useTheme } from '@mui/material';
 import { useParams } from 'next/navigation';
 import Grid from '@mui/material/Unstable_Grid2/Grid2';
@@ -15,7 +16,6 @@ import { useAppDispatcher, useAppSelector } from '@/lib/hooks';
 import { addToCart, selectCartItems } from '@/lib/features/cart/cartSlice';
 import notificationUtil from '@/utils/notification.util';
 import { addToWishlist, selectWishlistProducts } from '@/lib/features/wishlist/wishlistSlice';
-import Link from 'next/link';
 
 export default function ProductPage() {
   const cartItems = useAppSelector(selectCartItems);
